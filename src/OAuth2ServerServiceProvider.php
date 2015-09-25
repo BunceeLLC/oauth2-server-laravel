@@ -39,7 +39,7 @@ class OAuth2ServerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->setupConfig();
+        // $this->setupConfig();
         $this->setupMigrations();
     }
 

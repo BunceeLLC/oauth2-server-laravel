@@ -10,12 +10,22 @@ Contributions are welcome, and are accepted via pull requests. Please review the
 * Send a coherent commit history, making sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash](http://git-scm.com/book/en/Git-Tools-Rewriting-History) them before submitting.
 * You may also need to [rebase](http://git-scm.com/book/en/Git-Branching-Rebasing) to avoid merge conflicts.
 
+<<<<<<< HEAD
+
 ## Running Tests
 
 You will need an install of [Composer](https://getcomposer.org) before continuing.
 
 First, install the dependencies:
 
+=======
+## Running Tests
+
+You will need an install of [Composer](https://getcomposer.org) before continuing.
+
+First, install the dependencies:
+
+>>>>>>> 8f9bf62d60790ab0a1f9a37e70a14ab1c472febe
 ```bash
 $ composer install
 ```
