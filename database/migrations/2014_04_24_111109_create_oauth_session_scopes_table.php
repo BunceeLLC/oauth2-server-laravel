@@ -27,7 +27,7 @@ class CreateOauthSessionScopesTable extends Migration
      */
     public function up()
     {
-        Schema::create('oauth_session_scopes', function (Blueprint $table) {
+        Schema::connection('tenant-utf8')->create('oauth_session_scopes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('session_id')->unsigned();
             $table->string('scope_id', 40);

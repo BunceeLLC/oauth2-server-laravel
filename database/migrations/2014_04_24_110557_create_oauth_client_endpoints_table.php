@@ -27,7 +27,7 @@ class CreateOauthClientEndpointsTable extends Migration
      */
     public function up()
     {
-        Schema::create('oauth_client_endpoints', function (Blueprint $table) {
+        Schema::connection('tenant-utf8')->create('oauth_client_endpoints', function (Blueprint $table) {
             $table->increments('id');
             $table->string('client_id', 40);
             $table->string('redirect_uri');

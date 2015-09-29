@@ -27,7 +27,7 @@ class CreateOauthClientGrantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('oauth_client_grants', function (Blueprint $table) {
+        Schema::connection('tenant-utf8')->create('oauth_client_grants', function (Blueprint $table) {
             $table->increments('id');
             $table->string('client_id', 40);
             $table->string('grant_id', 40);

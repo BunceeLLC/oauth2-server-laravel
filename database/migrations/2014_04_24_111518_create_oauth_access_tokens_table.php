@@ -27,7 +27,7 @@ class CreateOauthAccessTokensTable extends Migration
      */
     public function up()
     {
-        Schema::create('oauth_access_tokens', function (Blueprint $table) {
+        Schema::connection('tenant-utf8')->create('oauth_access_tokens', function (Blueprint $table) {
             $table->string('id', 40)->primary();
             $table->integer('session_id')->unsigned();
             $table->integer('expire_time');

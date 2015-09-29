@@ -27,7 +27,7 @@ class CreateOauthSessionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('oauth_sessions', function (Blueprint $table) {
+        Schema::connection('tenant-utf8')->create('oauth_sessions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('client_id', 40);
             $table->enum('owner_type', ['client', 'user'])->default('user');
