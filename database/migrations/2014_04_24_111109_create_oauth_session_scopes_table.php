@@ -27,7 +27,18 @@ class CreateOauthSessionScopesTable extends Migration
      */
     public function up()
     {
-        Schema::connection('tenant-utf8')->create('oauth_session_scopes', function (Blueprint $table) {
+        $client = ClientModel::find(array_get(DB::select('select database() as database_name'), '0.database_name'));
+        
+        if(!isset($client)) {
+            $this->migrate('tenant-utf8');
+        } else {
+            $this->migrate($client->canonical_name);
+        }
+    }
+
+    public function migrate($connection)
+    {
+        Schema::connection($connection)->create('oauth_session_scopes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('session_id')->unsigned();
             $table->string('scope_id', 40);

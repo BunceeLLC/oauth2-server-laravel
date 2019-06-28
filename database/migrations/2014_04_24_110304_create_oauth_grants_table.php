@@ -25,9 +25,21 @@ class CreateOauthGrantsTable extends Migration
      *
      * @return void
      */
+    
     public function up()
     {
-        Schema::connection('tenant-utf8')->create('oauth_grants', function (Blueprint $table) {
+        $client = ClientModel::find(array_get(DB::select('select database() as database_name'), '0.database_name'));
+        
+        if(!isset($client)) {
+            $this->migrate('tenant-utf8');
+        } else {
+            $this->migrate($client->canonical_name);
+        }
+    }
+
+    public function migrate($connection)
+    {
+        Schema::connection($connection)->create('oauth_grants', function (Blueprint $table) {
             $table->string('id', 40)->primary();
             $table->timestamps();
         });
