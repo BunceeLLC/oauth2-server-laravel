@@ -31,6 +31,7 @@ class FeatureContext extends BehatFeatureContext
     {
         $this->resetMigrations();
     }
+
     /**
      * @Given /^An authorization server exists that supports the "([^"]*)" grant type$/
      */
@@ -126,7 +127,7 @@ class FeatureContext extends BehatFeatureContext
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application $app
+     * @param  \Illuminate\Contracts\Container\Container $app
      *
      * @return void
      */

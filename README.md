@@ -1,6 +1,8 @@
-# OAuth 2.0 Server for Laravel
+# OAuth 2.0 Server for Laravel (deprecated for Laravel 5.3+)
 
 ![oauth2-server-laravel](https://cloud.githubusercontent.com/assets/499192/9065550/751404ba-3ad2-11e5-9f92-3d4d5d4b9c54.png)
+
+> **Note:** This package is no longer maintaned for Laravel 5.3+ since Laravel now features the [Passport package](https://laravel.com/docs/passport).
 
 [OAuth 2.0](http://tools.ietf.org/wg/oauth/draft-ietf-oauth-v2/) authorization server and resource server for the Laravel and Lumen frameworks. Standard compliant thanks to the amazing work by [The League of Extraordinary Packages](http://www.thephpleague.com) OAuth 2.0 authorization server and resource server.
 
@@ -15,7 +17,7 @@
 
 ## Version Compatibility
 
- Laravel  | OAuth Server | PHP 
+ Laravel  | OAuth Server | PHP
 :---------|:-------------|:----
  4.0.x    | 1.0.x        |>= 5.3
  4.1.x    | 1.0.x        |>= 5.3
@@ -26,12 +28,13 @@
 =======
 >>>>>>> 8f9bf62d60790ab0a1f9a37e70a14ab1c472febe
  5.1.x    | 5.0.x        |>= 5.5.9
+ 5.2.x    | 5.1.x        |>= 5.5.9
 
 ## Documentation
 
-This package features an [extensive wiki](https://github.com/lucadegasperi/oauth2-server-laravel/wiki) to help you getting started implementing an OAuth 2.0 server in your Laravel application.
+This package features an [extensive documentation](docs#readme) to help you getting started implementing an OAuth 2.0 server in your Laravel application.
 
-## Support
+## Contributing
 
 Bugs and feature request are tracked on [GitHub](https://github.com/lucadegasperi/oauth2-server-laravel/issues). Please read our [contribution guidelines](CONTRIBUTING.md) before opening a new issue or submitting a new pull request.
 
@@ -41,4 +44,4 @@ The code on which this package is [based](https://github.com/thephpleague/oauth2
 
 ## License
 
-This package is released under [the MIT License](LICENSE).
+The Laravel OAuth 2.0 package is released under [the MIT License](LICENSE).
