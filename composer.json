@@ -13,6 +13,12 @@
             "email": "hello@vinkla.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/BunceeLLC/oauth2-server"
+        }
+    ],
     "require": {
         "php": ">=7.2.0",
         "illuminate/database": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0",
@@ -21,7 +27,7 @@
         "illuminate/http": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0",
         "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0",
         "illuminate/config": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0",
-        "league/oauth2-server": "^5.0"
+        "league/oauth2-server": "dev-buncee"
     },
     "require-dev": {
         "orchestra/testbench": "3.1.* || 3.2.*",
